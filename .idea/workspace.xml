@@ -4,13 +4,13 @@
     <list default="true" id="b680d75f-948b-4026-b36c-56fd124ecb1e" name="Default" comment="" />
     <ignored path="CrescimentoDB.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/ImportFile.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371320832337" ignored="false" />
+    <file path="/ImportFile.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371485129140" ignored="false" />
     <file path="/fragment.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371240505684" ignored="false" />
     <file path="/Builder.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371240608500" ignored="false" />
     <file path="/Engine.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371319920533" ignored="false" />
     <file path="/TableSpace.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371323233698" ignored="false" />
     <file path="/StringUtil.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371319593018" ignored="false" />
-    <file path="/DataLineParser.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371323134161" ignored="false" />
+    <file path="/DataLineParser.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371485117144" ignored="false" />
     <file path="/TablespaceUtil.java" changelist="b680d75f-948b-4026-b36c-56fd124ecb1e" time="1371322626072" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +26,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -61,7 +61,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -72,15 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImportFile.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImportFile.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lb2/com/br/main/ImportFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#698#706#0" expanded="true" />
-                <element signature="e#759#769#0" expanded="true" />
-              </folding>
+            <state line="27" column="130" selection-start="772" selection-end="772" vertical-scroll-proportion="0.49107143">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,19 +94,15 @@
         <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#344#352#0" expanded="true" />
-                <element signature="e#405#415#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataLineParser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DataLineParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/DataLineParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="71" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.7589286">
+            <state line="58" column="56" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1246#1254#0" expanded="true" />
@@ -124,9 +116,7 @@
         <entry file="file://$PROJECT_DIR$/src/lb2/com/br/model/TableSpace.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,9 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/lb2/com/br/util/TablespaceUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,10 +145,10 @@
         <option value="$PROJECT_DIR$/src/lb2/com/br/model/DataLine.java" />
         <option value="$PROJECT_DIR$/src/lb2/com/br/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/src/lb2/com/br/core/Engine.java" />
-        <option value="$PROJECT_DIR$/src/lb2/com/br/main/ImportFile.java" />
         <option value="$PROJECT_DIR$/src/lb2/com/br/util/TablespaceUtil.java" />
-        <option value="$PROJECT_DIR$/src/lb2/com/br/core/DataLineParser.java" />
         <option value="$PROJECT_DIR$/src/lb2/com/br/model/TableSpace.java" />
+        <option value="$PROJECT_DIR$/src/lb2/com/br/core/DataLineParser.java" />
+        <option value="$PROJECT_DIR$/src/lb2/com/br/main/ImportFile.java" />
       </list>
     </option>
   </component>
@@ -319,9 +307,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -434,26 +422,26 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46938777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.53061223" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35034013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.1037415" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46938777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.89625853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -515,14 +503,49 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/model/DataLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="42" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/DataLineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="71" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1246#1254#0" expanded="true" />
+            <element signature="e#1305#1313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/model/TableSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/util/TablespaceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lb2/com/br/main/ImportFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="109" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#698#706#0" expanded="true" />
-            <element signature="e#759#769#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -536,11 +559,7 @@
     <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#344#352#0" expanded="true" />
-            <element signature="e#405#415#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -565,54 +584,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/main/ImportFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#698#706#0" expanded="true" />
-            <element signature="e#759#769#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#344#352#0" expanded="true" />
-            <element signature="e#405#415#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lb2/com/br/util/TablespaceUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lb2/com/br/model/TableSpace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lb2/com/br/core/DataLineParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="71" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.7589286">
+        <state line="58" column="56" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1246#1254#0" expanded="true" />
             <element signature="e#1305#1313#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lb2/com/br/main/ImportFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="130" selection-start="772" selection-end="772" vertical-scroll-proportion="0.49107143">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -49,4 +49,13 @@ public class DataLineParser {
             tableSpaces.get(index).setUtilizado(dt.getUtilizado());
         }
     }
+    public void checkAverageTSGrowth(){
+        for(TableSpace ts : tableSpaces){
+            double first = ts.getUtilizado().get(0);
+            double last = ts.getUtilizado().get(ts.getUtilizado().size()-1);
+            double avg = (last-first)/ts.getDatasAtendimento().size();
+            System.out.println("Tablespace:"+ts.getNome());
+            System.out.println("Crescimento Médio:"+avg);
+        }
+    }
 }

@@ -32,23 +32,7 @@ public class ImportFile {
             String data = Builder.readFileAsString(pathToTxt);
             linesArray = engine.extractUseful(data);
             DataLineParser parser = new DataLineParser(linesArray);
-         /*   for(DataLine tb : tablesFromInstance){
-                int i = tableSpacesName.indexOf(tb.getNome());
-                if(i==-1){
-
-                    System.out.println(tb.getNome());
-                    tableSpacesName.add(tb.getNome());
-                }
-            }
-            for(String name : tableSpacesName){
-                for(DataLine tb :tablesFromInstance){
-                    if(tb.getNome().equals(name)){
-
-                    }
-                }
-            }   */
-
-
+            parser.checkAverageTSGrowth();
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }

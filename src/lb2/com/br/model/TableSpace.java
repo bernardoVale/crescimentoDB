@@ -15,6 +15,7 @@ public class TableSpace {
     private String nome;
     private List<String> datasAtendimento;
     private List<Double> utilizado;
+    private Double total;
 
     public TableSpace() {
     }
@@ -23,6 +24,14 @@ public class TableSpace {
         this.nome = nome;
         this.datasAtendimento = datasAtendimento;
         this.utilizado = utilizado;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
     }
 
     public TableSpace(String nome) {

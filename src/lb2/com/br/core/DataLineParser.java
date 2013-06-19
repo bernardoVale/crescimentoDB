@@ -27,11 +27,13 @@ public class DataLineParser {
     private String ignore;
     private List<String> ignoredList = new ArrayList<String>();
     private Export exp;
-    public DataLineParser(List<DataLine> dataLines,String ignore,String regex) {
+    private String filename;
+    public DataLineParser(List<DataLine> dataLines,String ignore,String regex,String fileName) {
         this.datalines =  dataLines;
         tbNames = new ArrayList<String>();
         tableSpaces = new ArrayList<TableSpace>();
         this.ignore = ignore;
+        this.filename = fileName;
         parse();
         parseIgnored(regex);
         parseTotals();
@@ -52,7 +54,8 @@ public class DataLineParser {
      */
     private void parseToExport() {
         double total = checkTotalGrowth();
-        exp = new Export("/home/bernardovale/Documentos/LB2/export/"+String.valueOf(System.currentTimeMillis())+".xls"
+        exp = new Export("/home/bernardovale/Documentos/LB2/export/"
+                +filename+"_"+String.valueOf(System.currentTimeMillis())+".xls"
                 ,tableSpaces,total);
         try {
             exp.exportTablespaces();

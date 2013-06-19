@@ -1,9 +1,11 @@
 package lb2.com.br.excel;
 
 import lb2.com.br.model.TableSpace;
+import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.CellStyle;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,9 +38,10 @@ public class Export {
 
     /**
      * Populates all tablespaces names into the first Row
+     * also add the dates
      */
     public void header(){
-        HSSFRow cabecalho = sheet.getRow(0);
+        HSSFRow cabecalho = sheet.createRow(0);
         int i = 1;
         cabecalho.createCell(0).setCellValue("ATENDIMENTO");
         for(TableSpace ts : data){
@@ -46,10 +49,22 @@ public class Export {
             i++;
         }
     }
+    /**
+     *
+     * @param rows
+     */
     private void instantiateTable(int rows){
-        for (int i=0;i<=rows;i++){
-            sheet.createRow(i);
+        int cont = 0;
+        for (int i=1;i<=rows;i++){
+            sheet.createRow(i).createCell(0).setCellValue(
+                    data.get(0).getDatasAtendimento().get(cont)
+            );
+            cont++;
         }
+        HSSFCell cel1 = sheet.createRow(cont + 2).createCell(0);
+        cel1.setCellValue("TOTAL TABLESPACE");
+        sheet.createRow(cont+3).createCell(0).setCellValue("TOTAL");
+        sheet.createRow(cont+4).createCell(0).setCellValue(total);
     }
     public void exportTablespaces() throws IOException {
         try {
@@ -63,6 +78,7 @@ public class Export {
                     sheet.getRow(row).createCell(column).setCellValue(value);
                     row++;
                 }
+                sheet.getRow(row+1).createCell(column).setCellValue(ts.getTotal());
                 row = 1;
                 column++;
             }

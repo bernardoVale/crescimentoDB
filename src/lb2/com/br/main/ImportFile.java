@@ -12,28 +12,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
  * User: bernardovale
  * Date: 14/06/13
  * Time: 17:01
- * To change this template use File | Settings | File Templates.
- */
-public class ImportFile {
+ */public class ImportFile {
 
+    private static Engine engine;
 
     public static void main(String[] args) {
 
-        String pathToTxt = "/home/bernardovale/Documentos/LB2/clientes" +
-                "/flessak/teste.txt";
-        String ignoreTS = "TEMP;UNDOTBS1";//args[0]; //Default path
-        Engine engine = new Engine();
+        String pathToTxt = args[0];//"/home/bernardovale/Documentos/LB2/clientes" +
+                //"/agroBrasil/2013-Historico_tablespaces_ORCL_AB.txt";
+       /* String pathToTxt = "/home/bernardovale/Documentos/LB2/clientes" +
+                "/agroBrasil/teste2.txt";        */
+        String ignoreTS = args[1];//"TEMP;UNDOTBS1";//args[0]; //Default path
+        String fileName = args[2];//"abORCL";
         List<DataLine> linesArray;
 
         try {
             // txt File turn to String
             String data = Builder.readFileAsString(pathToTxt);
-            linesArray = engine.extractUseful(data);
-            DataLineParser parser = new DataLineParser(linesArray,ignoreTS,";");
+            ignoreTS = Builder.readFileAsString(ignoreTS);
+            engine = new Engine(data);
+            linesArray = engine.extractUseful();
+            DataLineParser parser = new DataLineParser(linesArray,ignoreTS,";",fileName);
             parser.checkAverageTSGrowth();
             System.out.println("Crescimento total:"+parser.checkTotalGrowth());
             //parser.checkAverageTSGrowth();

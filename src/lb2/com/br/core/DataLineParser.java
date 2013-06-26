@@ -3,6 +3,7 @@ package lb2.com.br.core;
 import lb2.com.br.excel.Export;
 import lb2.com.br.model.DataLine;
 import lb2.com.br.model.TableSpace;
+import lb2.com.br.util.DateUtil;
 import lb2.com.br.util.TablespaceUtil;
 
 import java.io.IOException;
@@ -28,16 +29,39 @@ public class DataLineParser {
     private List<String> ignoredList = new ArrayList<String>();
     private Export exp;
     private String filename;
-    public DataLineParser(List<DataLine> dataLines,String ignore,String regex,String fileName) {
+    private Double size;
+    private String month;
+    public DataLineParser(List<DataLine> dataLines,String ignore,String regex,String fileName,String size,String month) {
         this.datalines =  dataLines;
         tbNames = new ArrayList<String>();
         tableSpaces = new ArrayList<TableSpace>();
         this.ignore = ignore;
         this.filename = fileName;
+        this.size = parseSize(size);
+        this.month = month;
         parse();
         parseIgnored(regex);
         parseTotals();
         parseToExport();
+    }
+
+    /**
+     * Alter size pattern to megabytes
+     * @param size
+     * @return
+     */
+    private Double parseSize(String size) {
+        String type = size.substring(size.length()-1);
+        String realSize = size.substring(0,size.length()-1);
+        if(type.equalsIgnoreCase("m")){
+            return Double.parseDouble(realSize);
+        }else if(type.equalsIgnoreCase("g")){
+            return Double.parseDouble(realSize)*1024;
+        }else if (type.equalsIgnoreCase("k")){
+            return Double.parseDouble(realSize)/1024;
+        }else{
+            return -1.0;
+        }
     }
 
     /**
@@ -54,9 +78,8 @@ public class DataLineParser {
      */
     private void parseToExport() {
         double total = checkTotalGrowth();
-        exp = new Export("/home/bernardovale/Documentos/LB2/export/"
-                +filename+"_"+String.valueOf(System.currentTimeMillis())+".xls"
-                ,tableSpaces,total);
+        exp = new Export(filename+"_"+String.valueOf(System.currentTimeMillis())+".xls"
+                ,tableSpaces,total,size);
         try {
             exp.exportTablespaces();
         } catch (IOException e) {
@@ -97,16 +120,30 @@ public class DataLineParser {
      * Transform datalines data into Tablespace object data
      */
     private void parse(){
+        //User parameter all means check all dates other else check only a specific month
+        if(month.equalsIgnoreCase("all"))
+            parse(null);
+        else
+            parse(month);
+    }
+
+    private void parse(String month){
         extractTablespaces();
         List<String> atendimentos = new ArrayList<String>();
         List<Double> utilizados = new ArrayList<Double>();
-        for (DataLine dt : datalines){
-            int index = TablespaceUtil.tbNameIndex(tableSpaces,dt.getNome());
-            tableSpaces.get(index).setDatasAtendimento(dt.getData());
-            tableSpaces.get(index).setUtilizado(dt.getUtilizado());
+            for (DataLine dt : datalines){
+                int index = TablespaceUtil.tbNameIndex(tableSpaces,dt.getNome());
+                if(month!=null){ //Add only if date pattern is checked true
+                    if(DateUtil.insideMonth(dt.getData(),month)){
+                        tableSpaces.get(index).setDatasAtendimento(dt.getData());
+                        tableSpaces.get(index).setUtilizado(dt.getUtilizado());
+                    }
+                }else{
+                    tableSpaces.get(index).setDatasAtendimento(dt.getData());
+                    tableSpaces.get(index).setUtilizado(dt.getUtilizado());
+                }
+            }
         }
-    }
-
     /**
      * Return the average growth by tablespace
      */

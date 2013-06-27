@@ -70,8 +70,8 @@ public class Export {
         sheet.createRow(maxRow+3).createCell(0).setCellValue(total);
         sheet.createRow(maxRow+4).createCell(0).setCellValue("DISK SPACE");
         sheet.createRow(maxRow+5).createCell(0).setCellValue(diskSize);
-        //todo Fazer calculo aqui
         sheet.createRow(maxRow+6).createCell(0).setCellValue("TEMPO DE DISCO");
+        sheet.createRow(maxRow+7).createCell(0).setCellFormula("(A"+(maxRow+6)+"/"+(maxRow+4)+")");
     }
 
     /**

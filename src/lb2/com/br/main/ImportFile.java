@@ -26,17 +26,18 @@ import java.util.List;
         String ignoreTS;
         String fileName;
         String month;
-        if(args.length==3){     //Default
+        String size;
+        if(args.length==4){     //Default
             ignoreTS = "TEMP;UNDOTBS1";
             fileName = args[1];
             month = args[2];
+            size = args[3];
         }else{
             fileName = args[1];
-            ignoreTS = Builder.readFileAsString(args[3]);
+            ignoreTS = Builder.readFileAsString(args[4]);
             month = args[2];
-
+            size = args[3];
         }
-        String size = "263485M";
          //args[0]; //Default path args[1];
         //fileName = "/home/bernardovale/Documentos/LB2/clientes/sercontel/sercontel";//args[2];//
         List<DataLine> linesArray;

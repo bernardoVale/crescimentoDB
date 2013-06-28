@@ -1,11 +1,13 @@
 package lb2.com.br.excel;
 
 import lb2.com.br.model.TableSpace;
+import lb2.com.br.util.LB2Styles;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -30,6 +32,7 @@ public class Export {
     private List<TableSpace> data;
     private Double diskSize;
     private int maxRow;
+    private LB2Styles styles;
 
     public Export(String nomeArquivo,List<TableSpace> data,double total,Double size) {
         sheet = workbook.createSheet("crescimentoTs");
@@ -38,6 +41,7 @@ public class Export {
         this.total = total;
         this.maxRow = findMaxRow();
         this.diskSize = size;
+        styles = new LB2Styles(workbook);
     }
 
     /**
@@ -65,13 +69,19 @@ public class Export {
             cont++;
         }
         HSSFCell cel1 = sheet.createRow(maxRow + 1).createCell(0);
-        cel1.setCellValue("TOTAL TABLESPACE");
-        sheet.createRow(maxRow +2).createCell(0).setCellValue("TOTAL");
-        sheet.createRow(maxRow+3).createCell(0).setCellValue(total);
-        sheet.createRow(maxRow+4).createCell(0).setCellValue("DISK SPACE");
-        sheet.createRow(maxRow+5).createCell(0).setCellValue(diskSize);
-        sheet.createRow(maxRow+6).createCell(0).setCellValue("TEMPO DE DISCO");
-        sheet.createRow(maxRow+7).createCell(0).setCellFormula("(A"+(maxRow+6)+"/"+(maxRow+4)+")");
+        cel1.setCellValue("Total por Tablespace");
+        sheet.createRow(maxRow +2).createCell(0).setCellValue("Total Geral");
+        HSSFCell totalGeral =  sheet.createRow(maxRow+3).createCell(0);
+        totalGeral.setCellStyle(styles.lb2Bold());
+        totalGeral.setCellValue(total);
+        sheet.createRow(maxRow+4).createCell(0).setCellValue("Espaço em Disco (Mb)");
+        HSSFCell disk = sheet.createRow(maxRow+5).createCell(0);
+        disk.setCellValue(diskSize);
+        disk.setCellStyle(styles.lb2Bold());
+        HSSFCell totalDisk = sheet.createRow(maxRow+7).createCell(0);
+        sheet.createRow(maxRow+6).createCell(0).setCellValue("Tempo de disco (Mêses)");
+        totalDisk.setCellStyle(styles.lb2Bold());
+        totalDisk.setCellFormula("(A"+(maxRow+6)+"/A"+(maxRow+4)+")");
     }
 
     /**
@@ -99,7 +109,9 @@ public class Export {
                     sheet.getRow(roww+1).createCell(column).setCellValue(ts.getUtilizado().get(roww));
                     row = roww+1;//gambiarra sempre funfa
                 }
-                sheet.getRow(maxRow+1).createCell(column).setCellValue(ts.getTotal());
+                HSSFCell total = sheet.getRow(maxRow + 1).createCell(column);
+                total.setCellStyle(styles.lb2Bold());
+                total.setCellValue(ts.getTotal());
                 column++;
             }
             workbook.write(fos);
